@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocationTracking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2f-lN-K9E">
+                                <rect key="frame" x="135" y="74" width="144.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User location tracking" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBg-u8-yDw">
+                                <rect key="frame" x="10" y="164" width="394" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last location:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f5-fO-YG1">
+                                <rect key="frame" x="20" y="224" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last tracking at: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHi-oY-wEt">
+                                <rect key="frame" x="20" y="253.5" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AFi-Pv-dhr">
+                                <rect key="frame" x="0.0" y="295" width="414" height="557"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8od-OJ-2yC">
+                                <rect key="frame" x="352" y="64" width="42" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearRecordsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M3f-Hv-FgU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AFi-Pv-dhr" firstAttribute="top" secondItem="zHi-oY-wEt" secondAttribute="bottom" constant="20" id="0Av-4B-nKj"/>
+                            <constraint firstItem="DBg-u8-yDw" firstAttribute="top" secondItem="j2f-lN-K9E" secondAttribute="bottom" constant="30" id="3gA-pR-eD9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AFi-Pv-dhr" secondAttribute="bottom" constant="10" id="8Qf-SG-z2X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9f5-fO-YG1" secondAttribute="trailing" constant="20" id="A58-yn-5Vd"/>
+                            <constraint firstItem="DBg-u8-yDw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="C3J-jI-nO3"/>
+                            <constraint firstItem="j2f-lN-K9E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="CHC-fb-5Qz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DBg-u8-yDw" secondAttribute="trailing" constant="10" id="Fa9-oa-ePc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AFi-Pv-dhr" secondAttribute="trailing" id="J8Z-Ce-YAs"/>
+                            <constraint firstItem="8od-OJ-2yC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Q7s-NN-N2k"/>
+                            <constraint firstItem="zHi-oY-wEt" firstAttribute="leading" secondItem="9f5-fO-YG1" secondAttribute="leading" id="QYn-f8-hxI"/>
+                            <constraint firstItem="DBg-u8-yDw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U8b-Av-NG5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8od-OJ-2yC" secondAttribute="trailing" constant="20" id="W3L-Th-I6d"/>
+                            <constraint firstItem="j2f-lN-K9E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dEK-KJ-AZA"/>
+                            <constraint firstItem="AFi-Pv-dhr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g1W-cY-eOb"/>
+                            <constraint firstItem="zHi-oY-wEt" firstAttribute="top" secondItem="9f5-fO-YG1" secondAttribute="bottom" constant="8" id="hCZ-eZ-IM1"/>
+                            <constraint firstItem="9f5-fO-YG1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="i03-pY-btD"/>
+                            <constraint firstItem="zHi-oY-wEt" firstAttribute="trailing" secondItem="9f5-fO-YG1" secondAttribute="trailing" id="lLw-or-fA4"/>
+                            <constraint firstItem="9f5-fO-YG1" firstAttribute="top" secondItem="DBg-u8-yDw" secondAttribute="bottom" constant="30" id="tYj-b8-CDR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lastLocationLabel" destination="9f5-fO-YG1" id="kRK-RR-6Dm"/>
+                        <outlet property="lastTrackingTimeLabel" destination="zHi-oY-wEt" id="9oX-wY-SWH"/>
+                        <outlet property="locationRecordsTableView" destination="AFi-Pv-dhr" id="Iyv-0R-GVK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
